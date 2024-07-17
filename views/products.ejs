@@ -1,0 +1,20 @@
+<!-- products.ejs -->
+<h1>All Products</h1>
+<ul>
+  <% products.forEach((product) => { %>
+    <li>
+      <strong>Prduct Name:</strong> <%= product.product_name %><br>
+      <strong>Product ID:</strong> <%= product.product_id %><br>
+      <strong>Price:</strong> <%= product.price %><br>
+      <strong>Quantity:</strong> <%= product.quantity %><br>
+      <button onclick="redirectToAnotherPage()">buy now!</button>
+      <br>
+      <br>
+    </li>
+  <% }) %>
+</ul>
+<script>
+  function redirectToAnotherPage() {
+    window.location.assign("form.ejs");
+  }
+</script>
